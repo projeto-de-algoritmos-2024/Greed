@@ -1,20 +1,20 @@
-mport tkinter as tk
+import tkinter as tk
 from tkinter import ttk, messagebox
 import heapq
 from collections import defaultdict
 
 class HuffmanNode:
-    def _init_(self, char, freq):
-        self.char = char
-        self.freq = freq
-        self.left = None
+    def __init__(self, char, freq):
+        self.char = char  
+        self.freq = freq  
+        self.left = None 
         self.right = None
-    
-    def _lt_(self, other):
+
+    def __lt__(self, other):
         return self.freq < other.freq
 
 class HuffmanViewer:
-    def _init_(self, root):
+    def __init__(self, root):
         self.root = root
         self.root.title("Visualizador de Árvore de Huffman")
         self.root.geometry("800x600")
@@ -31,14 +31,12 @@ class HuffmanViewer:
         self.build_button = ttk.Button(self.input_frame, text="Construir Árvore", command=self.build_tree)
         self.build_button.pack(side=tk.LEFT)
         
-        # Canvas for tree visualization
         self.canvas = tk.Canvas(root, bg='white')
         self.canvas.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
         
         self.nodes = []
         self.current_step = 0
         
-        # Navigation buttons
         self.nav_frame = ttk.Frame(root, padding="10")
         self.nav_frame.pack(fill=tk.X)
         
@@ -68,8 +66,8 @@ class HuffmanViewer:
             self.nodes.append(("leaf", node))
         
         while len(heap) > 1:
-            left = heapq.heappop(heap)
-            right = heapq.heappop(heap)
+            left = heapq.heappop(heap)     
+            right = heapq.heappop(heap)   
             
             internal = HuffmanNode('*', left.freq + right.freq)
             internal.left = left
@@ -91,26 +89,31 @@ class HuffmanViewer:
     
     def draw_node(self, node, x, y, dx, dy):
         radius = 25
-
         self.canvas.create_oval(x-radius, y-radius, x+radius, y+radius, fill='lightblue')
-        
+
         text = f"{node.char}\n{node.freq}"
         self.canvas.create_text(x, y, text=text)
         
         if node.left:
             child_x = x - dx
+
             child_y = y + dy
+            
             self.canvas.create_line(x, y+radius, child_x, child_y-radius)
+            
             self.draw_node(node.left, child_x, child_y, dx/2, dy)
         
         if node.right:
             child_x = x + dx
+            
             child_y = y + dy
+            
             self.canvas.create_line(x, y+radius, child_x, child_y-radius)
+            
             self.draw_node(node.right, child_x, child_y, dx/2, dy)
     
     def update_visualization(self):
-        self.canvas.delete("all")
+        self.canvas.delete("all") 
         if not self.nodes:
             return
         
@@ -131,7 +134,7 @@ class HuffmanViewer:
             self.current_step -= 1
             self.update_visualization()
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     root = tk.Tk()
     app = HuffmanViewer(root)
     root.mainloop()
