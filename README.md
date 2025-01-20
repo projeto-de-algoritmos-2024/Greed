@@ -27,6 +27,18 @@ O código é dividido em três classes principais:
 2. **HuffmanAlgorithm**: Contém a lógica para calcular as frequências dos caracteres e construir a árvore de Huffman.
 3. **HuffmanViewer**: Gerencia a interface gráfica e a interação do usuário, permitindo a entrada de texto e a visualização da árvore.
 
+### Requisitos
+- Python 3.x
+- Tkinter (geralmente está incluído na instalação do Python)
+- Caso nao, sudo apt-get install python3-tk
+
+### Como Executar
+1. Certifique-se de ter o Python instalado no seu sistema
+2. Execute o aplicativo:
+```bash
+python huffman_viewer.py
+```
+
 ## Como Usar
 
 1. Execute o script.
