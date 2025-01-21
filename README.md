@@ -50,3 +50,4 @@ python huffman_viewer.py
 Screenshots
 
 ![image](https://github.com/user-attachments/assets/92e7b669-c9c8-4d9d-8d1a-9b77dcb48afc)
+![image](https://github.com/user-attachments/assets/5ee0cada-ba6b-482a-8451-aa843de41c84)
