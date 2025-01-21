@@ -45,3 +45,8 @@ python huffman_viewer.py
 2. Insira um texto no campo de entrada.
 3. Clique no botão "Construir Árvore" para iniciar o processo.
 4. Use os botões "Anterior" e "Próximo" para navegar pelas etapas da construção da árvore.
+
+
+Screenshots
+
+![image](https://github.com/user-attachments/assets/92e7b669-c9c8-4d9d-8d1a-9b77dcb48afc)
