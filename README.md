@@ -39,7 +39,7 @@ O código é dividido em três classes principais:
 python huffman_viewer.py
 ```
 
-## Como Usar
+### Como Usar
 
 1. Execute o script.
 2. Insira um texto no campo de entrada.
@@ -47,7 +47,7 @@ python huffman_viewer.py
 4. Use os botões "Anterior" e "Próximo" para navegar pelas etapas da construção da árvore.
 
 
-Screenshots
+## Screenshots
 
 ![image](https://github.com/user-attachments/assets/92e7b669-c9c8-4d9d-8d1a-9b77dcb48afc)
 ![image](https://github.com/user-attachments/assets/5ee0cada-ba6b-482a-8451-aa843de41c84)
